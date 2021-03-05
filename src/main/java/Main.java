@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+ import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+    Scanner keyboard = new Scanner(System.in);
+
+    double baseFee = 10;
+    double finalCharge = 0;
+    double checkFee = 0;
+
+    System.out.println("Enter the number of checks for the month: ");
+    int numChecks = keyboard.nextInt();
+
+    if (numChecks < 20) {
+      checkFee = 0.10;
+    } else if (numChecks >= 20 && numChecks < 40) {
+      checkFee = 0.08;
+    } else if (numChecks >= 40 && numChecks < 60) {
+      checkFee = 0.06;
+    } else {
+      checkFee = 0.04;
+    }
+
+    System.out.print(FinalCharges);
+ 
+    }
+    public static double FinalCharges(double baseFee, double checkFee, double numChecks, double charges){
+        charges = baseFee + (checkFee * numChecks);
+        return charges;
+    }
+    
+}
